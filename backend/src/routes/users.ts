@@ -4,6 +4,7 @@ import jwt from "jsonwebtoken";
 import { check, validationResult } from "express-validator";
 
 const router = express.Router();
+
 router.post(
   "/register",
   [
@@ -36,7 +37,7 @@ router.post(
       res.cookie("auth_token", token, {
         httpOnly: true,
         secure: process.env.NODE_ENV === "production",
-        maxAge: 86400,
+        maxAge: 86400000,
       });
       return res.status(200).json({ message: "User registered successful" });
     } catch (error) {
