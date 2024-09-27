@@ -16,7 +16,7 @@ const App = () => {
           path="/"
           element={
             <Layout>
-              <div className="flex">
+              <div className="flex flex-col gap-5">
                 <p>Home - Page</p>
               </div>
             </Layout>
