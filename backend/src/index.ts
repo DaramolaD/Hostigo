@@ -6,6 +6,7 @@ import userRoutes from "./routes/users";
 import cookieParser from "cookie-parser";
 import authRoutes from "./routes/auth";
 import { env } from "process";
+import path from "path";
 
 /// first time first
 // mongoose.connect(process.env.MONGODB_CONNECTION_STRING as string);
@@ -27,6 +28,9 @@ app.use(
     credentials: true,
   })
 );
+
+app.use(express.static(path.join(__dirname, "../../frontend/dist")))
+
 app.use("/api/auth", authRoutes);
 app.use("/api/users", userRoutes);
 app.get("/test/api", async (req: Request, res: Response) => {
