@@ -16,7 +16,9 @@ const App = () => {
           path="/"
           element={
             <Layout>
-              <p>Home Page</p>
+              <div className="flex">
+                <p>Home - Page</p>
+              </div>
             </Layout>
           }
         />
