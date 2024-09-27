@@ -16,7 +16,7 @@ const App = () => {
           path="/"
           element={
             <Layout>
-              <p>Home</p>
+              <p>Home Page</p>
             </Layout>
           }
         />
