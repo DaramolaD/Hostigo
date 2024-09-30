@@ -34,6 +34,8 @@ router.post(
         process.env.JWT_SECRET_KEY as string,
         { expiresIn: "1d" }
       );
+      console.log("user.id,", user.id);
+      
       res.cookie("auth_token", token, {
         httpOnly: true,
         secure: process.env.NODE_ENV === "production",
